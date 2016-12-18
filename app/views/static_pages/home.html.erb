@@ -1,9 +1,13 @@
 <% if current_user %>
+<h1> samut </h1>
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+    </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
@@ -16,6 +20,5 @@
 <% else %>
   <div class="center jumbotron">
     <h1>Welcome to the Twitter App</h1>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
